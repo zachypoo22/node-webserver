@@ -52,6 +52,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render(__dirname + '/views/projects.hbs', {
+        pageTitle: "Portfolio Page Here",
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'OH NO THIS BAD!'
